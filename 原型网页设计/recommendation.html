@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canteen Hunter Prototype</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/recommendation.css">
+</head>
+<body>
+
+<div class="screen">
+  <div class="content recommendation">
+    <img id="status-bar" src="images/statusBarBlack.png">
+    <div id="canteen-list">
+        <p id="list-title">餐厅推荐</p>
+        
+        <div id="condition-list">
+            <div class="condition-choice active" id="condition1">
+                综合
+            </div>
+            <div class="condition-choice" id="condition2">
+                评价
+            </div>
+            <img src="images/conditionPencil.png" id="condition-pencil">
+        </div>
+
+        <div class="canteen-item">
+            <img class="canteen-item-photo" src="images/canteen1.jpg">
+            <p class="canteen-item-name">东园食堂</p>
+            <p class="canteen-item-info">
+                <span>3人</span>
+                <span>2.0km</span>
+                <span><img src="images/love.png"> 100</span>
+            </p>
+        </div>
+        <div class="canteen-item">
+            <img class="canteen-item-photo" src="images/canteen1.jpg">
+            <p class="canteen-item-name">韵苑食堂</p>
+            <p class="canteen-item-info">
+                <span>3人</span>
+                <span>2.0km</span>
+                <span><img src="images/love.png"> 100</span>
+            </p>
+        </div>
+        <div class="canteen-item">
+            <img class="canteen-item-photo" src="images/canteen1.jpg">
+            <p class="canteen-item-name">学一食堂</p>
+            <p class="canteen-item-info">
+                <span>3人</span>
+                <span>2.0km</span>
+                <span><img src="images/love.png"> 100</span>
+            </p>
+        </div>
+        <div class="canteen-item">
+            <img class="canteen-item-photo" src="images/canteen1.jpg">
+            <p class="canteen-item-name">学二食堂</p>
+            <p class="canteen-item-info">
+                <span>3人</span>
+                <span>2.0km</span>
+                <span><img src="images/love.png"> 100</span>
+            </p>
+        </div>
+        <div class="canteen-item">
+            <img class="canteen-item-photo" src="images/canteen1.jpg">
+            <p class="canteen-item-name">西一食堂</p>
+            <p class="canteen-item-info">
+                <span>3人</span>
+                <span>2.0km</span>
+                <span><img src="images/love.png"> 100</span>
+            </p>
+        </div>
+        <div class="canteen-item">
+            <img class="canteen-item-photo" src="images/canteen1.jpg">
+            <p class="canteen-item-name">百景园</p>
+            <p class="canteen-item-info">
+                <span>3人</span>
+                <span>2.0km</span>
+                <span><img src="images/love.png"> 100</span>
+            </p>
+        </div>
+    </div>
+
+    <div id="tabbar">
+        <div class="tab-item" id="tab1">
+            <img src="images/tabicon1.png">
+        </div>
+        <div class="tab-item active" id="tab2">
+            <img src="images/tabicon2.png">
+        </div>
+        <div class="tab-item" id="tab3">
+            <img src="images/tabicon3.png">
+        </div>
+    </div>
+  
+    <script type="text/javascript">
+        //固定tab 
+        $(".recommendation").scroll(function(){
+            var top = $(this).scrollTop();
+            $("#tabbar").css("bottom", -top);
+        });
+
+        //点击跳转
+        $(".recommendation .tab-item").click(function(){
+            var id = $(this).attr("id");
+            if (id == "tab1") {
+                jumpToPage('canteen.html')
+            } else if (id == "tab2") {
+                jumpToPage('recommendation.html')
+            } else if (id == "tab3") {
+                jumpToPage('setting.html')
+            }
+        });
+
+        //餐厅详情
+        $(".recommendation .canteen-item").click(function(){
+            jumpToPage('canteenDetail.html');
+        });
+
+        //自定义条件
+        $("#condition-pencil").click(function(){
+            jumpToPage('condition.html');
+        });
+
+    </script>
+
+  </div>
+</div>
+
+</body>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/main.js"></script>
+</html>

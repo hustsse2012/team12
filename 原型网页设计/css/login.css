@@ -1,0 +1,64 @@
+.login {
+    width: 100%;
+    background-image: url("../images/startupBg.png");
+    -moz-background-size:cover;
+    -ms-background-size:cover;
+    -webkit-background-size:cover;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../images/startupBg.png,sizingMethod=scale);
+}
+
+.login #title {
+    position: relative;
+    width: 100%;
+    margin: 15% 0 0 0;
+    text-align: center;
+    font-family: 'Roboto-Thin';
+    color: #fff;
+    font-size: 50px;
+}
+
+.login #input-form {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+/* 输入框 */
+.login #input-form input {
+    width: 80%;
+    margin: 10px 10%;
+    height: 40px;
+    background-color: rgba(255,255,255,0);
+    border: 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-family: STHeitiSC-Light;
+}
+/* 设置placeholder */
+.login ::-webkit-input-placeholder { color: #fff } /* WebKit browsers */
+.login :-moz-placeholder { color: #fff } /* Mozilla Firefox 4 to 18 */
+.login ::-moz-placeholder { color: #fff } /* Mozilla Firefox 19+ */
+.login :-ms-input-placeholder { color: #fff } /* Internet Explorer 10+ */
+
+
+/* 设置两个按钮 */
+.login #log-btn, .login #forget-btn { cursor: pointer }
+.login #log-btn {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Roboto-Regular';
+}
+
+.login #forget-btn {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-family: STHeitiSC-Light;
+}
